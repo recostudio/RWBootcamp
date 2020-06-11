@@ -41,12 +41,12 @@ class ViewController: UIViewController {
   
   var game = BullsEyeGame()
  var rgb = RGB()
-/*
+
     var targetColorValue = RGB()
     var guessColorValue = RGB()
     var score = 0
     var round = 0
-  */
+  
   @IBAction func aSliderMoved(sender: UISlider) {
     redLabel.text = String(Int(redSlider.value))
     greenLabel.text = String(Int(greenSlider.value))
@@ -57,11 +57,11 @@ class ViewController: UIViewController {
     }
   
   @IBAction func showAlert(sender: AnyObject) {
-    var difference = guessColorValue.difference(target: targetColorValue)
+    let difference = guessColorValue.difference(target: targetColorValue)
     
     var points = 100 - difference
       
-    game.score += Int(points)
+    score += Int(points)
       
       let title: String
       if difference == 0 {
@@ -107,14 +107,18 @@ class ViewController: UIViewController {
   }
   
   func startNewRound() {
-    game.startNewRound()
-    
+//    game.startNewRound()
+    round += 1
+       targetColorValue = RGB(r: Int.random(in: 0...255), g: Int.random(in: 0...255), b: Int.random(in: 0...255))
     targetLabel.backgroundColor = UIColor(rgbStruct: targetColorValue)
     
     
     }
     func startNewGame() {
-        game.startNewGame()
+//        game.startNewGame()
+        score = 0
+        round = 0
+        startNewRound()
     }
     
   override func viewDidLoad() {
