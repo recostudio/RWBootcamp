@@ -44,8 +44,8 @@ class ViewController: UIViewController {
 
     var targetColorValue = RGB()
     var guessColorValue = RGB()
-    var score = 0
-    var round = 0
+//    var score = 0
+//    var round = 0
   
   @IBAction func aSliderMoved(sender: UISlider) {
     redLabel.text = String(Int(redSlider.value))
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
     
     var points = 100 - difference
       
-    score += Int(points)
+    game.score += Int(points)
       
       let title: String
       if difference == 0 {
@@ -101,24 +101,24 @@ class ViewController: UIViewController {
   }
   
   func updateView() {
-    roundLabel.text = String(round)
-    scoreLabel.text = String(score)
+    roundLabel.text = String(game.round)
+    scoreLabel.text = String(game.score)
     
   }
   
   func startNewRound() {
 //    game.startNewRound()
-    round += 1
+    game.round += 1
        targetColorValue = RGB(r: Int.random(in: 0...255), g: Int.random(in: 0...255), b: Int.random(in: 0...255))
     targetLabel.backgroundColor = UIColor(rgbStruct: targetColorValue)
     
     
     }
     func startNewGame() {
-//        game.startNewGame()
-        score = 0
-        round = 0
-        startNewRound()
+      game.startNewGame()
+//        score = 0
+//        round = 0
+//        startNewRound()
     }
     
   override func viewDidLoad() {

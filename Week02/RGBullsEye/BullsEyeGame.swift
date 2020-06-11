@@ -12,8 +12,8 @@ class BullsEyeGame {
    
 //   var targetColorValue = RGB()
 //     var guessColorValue = RGB()
-//     var score = 0
-//     var round = 0
+     var score = 0
+     var round = 0
 
     /*
      var currentValue = 0
@@ -45,12 +45,13 @@ class BullsEyeGame {
     targetColorValue = RGB(r: Int.random(in: 0...255), g: Int.random(in: 0...255), b: Int.random(in: 0...255))
         
     }
+ */
     func startNewGame() {
         score = 0
         round = 0
-        startNewRound()
+//        startNewRound()
         
     }
-    */
+    
 }
 
