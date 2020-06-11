@@ -107,8 +107,8 @@ class ViewController: UIViewController {
   }
   
   func startNewRound() {
-//    game.startNewRound()
-    game.round += 1
+    game.startNewRound()
+//    game.round += 1
        targetColorValue = RGB(r: Int.random(in: 0...255), g: Int.random(in: 0...255), b: Int.random(in: 0...255))
     targetLabel.backgroundColor = UIColor(rgbStruct: targetColorValue)
     

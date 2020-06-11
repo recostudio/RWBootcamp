@@ -39,17 +39,17 @@ class BullsEyeGame {
         startNewGame()
     }
     */
-  /*
+  
     func startNewRound() {
         round += 1
-    targetColorValue = RGB(r: Int.random(in: 0...255), g: Int.random(in: 0...255), b: Int.random(in: 0...255))
+//    targetColorValue = RGB(r: Int.random(in: 0...255), g: Int.random(in: 0...255), b: Int.random(in: 0...255))
         
     }
- */
+ 
     func startNewGame() {
         score = 0
         round = 0
-//        startNewRound()
+        startNewRound()
         
     }
     
