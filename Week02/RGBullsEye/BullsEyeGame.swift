@@ -52,6 +52,8 @@ class BullsEyeGame {
         startNewRound()
         
     }
-    
+    init() {
+        startNewGame()
+    }
 }
 
